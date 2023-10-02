@@ -13,10 +13,11 @@ export class ProductsService {
     private http: HttpClient
   ) {}
 
-  getProducts() {
-    console.log(this.http, 'http');
-    console.log(this.config, 'config');
+  getSelectBarOptions() {
+    return this.http.get<IProduct[]>('https://kupikolesa.it-trends.ru/api/Option/GetAll?categoryId=5&displayType=1');
+  }
 
+  getProducts() {
     return this.http.get<IProduct[]>('https://kupikolesa.it-trends.ru/api/product/Popular');
   }
 }

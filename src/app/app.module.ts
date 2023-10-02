@@ -10,6 +10,9 @@ import { FooterComponent } from './components/common/footer/footer/footer.compon
 import { ProductCardComponent } from './components/common/product-card/product-card/product-card.component';
 import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './pages/cart/cart.component';
+import { MultiselectDropdownComponent } from './components/common/multiselect-dropdown/multiselect-dropdown.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     ProductCardComponent,
+    CartComponent,
+    MultiselectDropdownComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgMultiSelectDropDownModule.forRoot()],
   providers: [
     {
       provide: APP_SERVICE_CONFIG,
