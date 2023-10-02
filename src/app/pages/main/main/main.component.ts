@@ -11,12 +11,15 @@ export class MainComponent implements OnInit {
   constructor(
     @Inject(ProductsService) private productService: ProductsService
   ) {}
-  products!: IProduct[];
+  popularProducts!: IProduct[];
+  selectBarOptions!: any;
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((products) => {
-      console.log(products);
-      this.products = products;
+    this.productService.getProducts().subscribe((popularProducts) => {
+      this.popularProducts = popularProducts;
     });
+    this.productService.getSelectBarOptions().subscribe((options: any) => {
+      this.selectBarOptions = options.items;
+    })
   }
 }
