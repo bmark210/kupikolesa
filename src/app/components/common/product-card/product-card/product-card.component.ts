@@ -28,15 +28,4 @@ export class ProductCardComponent implements OnChanges {
       }
     }
   }
-
-  ngOnChanged(changes: SimpleChanges): void {
-    if (changes['index'] && changes['index'].currentValue) {
-      console.log(this.index, 'dscdmck');
-      if (this.index % 2 === 0) {
-        this.oddValue = 'assets/icons/sun.svg';
-      } else {
-        this.oddValue = 'assets/icons/sun.svg';
-      }
-    }
-  }
 }
