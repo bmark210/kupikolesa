@@ -14,7 +14,7 @@
   .dropdown-list {
     font-size: small;
     ul {
-      overflow: hidden !important;
+      overflow-x: hidden !important;
     }
   }
   .is-invalid {
@@ -39,7 +39,6 @@
       .selected-item {
         font-size: small;
         font-weight: 500;
-        overflow: hidden;
 
         &:hover {
           box-shadow: 1px 1px 2px 0px #5a5a5a !important;
